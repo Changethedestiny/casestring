@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main ()
+{
+   int a=0;
+   char ch, s[100];
+    printf("enter a string:\n");
+   gets(s);
+   while (s[a] != '\0') {
+      ch = s[a];
+      if (ch >= 'A' && ch <= 'Z')
+         s[a] = s[a] + 32;
+      else if (ch >= 'a' && ch <= 'z')
+         s[a] = s[a] - 32;  
+      a++;  
+   }
+   printf("%s\n", s);
+    return 0;
+}
